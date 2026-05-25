@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>CINEVERSE Home</title>
+
+<link rel="stylesheet"
+href="home.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<h1 class="logo">
+
+CINEVERSE
+
+</h1>
+
+<div>
+
+<input
+type="text"
+
+placeholder="Search Movies"
+
+class="search-box"
+
+id="searchInput"
+
+onkeyup="searchMovies()">
+
+<button
+class="logout-btn"
+
+onclick="logout()">
+
+Logout
+
+</button>
+
+<button
+onclick="resetData()"
+
+class="logout-btn">
+
+Reset
+
+</button>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section
+class="hero"
+
+id="heroBanner">
+
+<div class="hero-content">
+
+<h1 id="heroTitle">
+
+Pushpa 2
+
+</h1>
+
+<p id="heroDescription">
+
+Power. Revenge. Action.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="movies-section">
+
+<h2>
+
+Continue Watching ▶️
+
+</h2>
+
+<div
+class="movies-container"
+
+id="continueContainer">
+
+</div>
+
+</section>
+
+<!-- MOVIES -->
+
+<section class="movies-section">
+
+<h2>
+    
+    Trending Now 🔥
+
+</h2>
+
+<div
+class="movies-container"
+
+id="moviesContainer">
+
+</div>
+
+</section>
+
+
+<section class="movies-section">
+
+<h2>My Watchlist ❤️</h2>
+
+<div
+class="movies-container"
+id="watchlistContainer">
+
+</div>
+
+</section>Trending Now 🔥
+
+</h2>
+
+<div class="movies-container">
+
+<div class="movie-card">
+
+<img
+src="images/pushpa 2.jpg">
+
+</div>
+
+<div class="movie-card">
+
+<img
+src="images/salaar.jpg">
+
+</div>
+
+<div class="movie-card">
+
+<img
+src="images/devara.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+<!-- TRAILER POPUP -->
+
+<div
+id="trailerPopup"
+
+class="trailer-popup">
+
+<div class="trailer-content">
+
+<span
+class="close-btn"
+
+onclick="closeTrailer()">
+
+✖
+
+</span>
+
+<iframe
+id="trailerVideo"
+
+width="800"
+height="450"
+
+src=""
+
+frameborder="0"
+
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+</body>
+</html>
