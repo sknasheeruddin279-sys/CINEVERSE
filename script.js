@@ -712,7 +712,7 @@ trailerLink
 });
 
 });
-
+displayMovies();
 }
 
 catch(error){
@@ -723,4 +723,4 @@ console.log(error);
 
 }
 
-
+getMovies();
