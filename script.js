@@ -624,7 +624,7 @@ onclick="playTrailer(
 
 }
 
-displayMovies();
+getMovies();
 
 displayWatchlist();
 
@@ -712,8 +712,6 @@ trailerLink
 });
 
 });
-
-displayMovies();
 
 }
 
