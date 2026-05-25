@@ -723,4 +723,4 @@ console.log(error);
 
 }
 
-getMovies();
+
