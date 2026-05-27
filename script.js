@@ -188,58 +188,7 @@ name:"Shyam Singha Roy",
 image:"images/shyam singha roy.jpg",
 
 trailer:"https://www.youtube.com/embed/3YGqoG3engk?si=DFcnvlTeZGJ0Ecs-" 
-},
-
-{
-name:"Pizzodyssey",
-trailer:"https://www.youtube.com/embed/8u6V8XxK6L4"
-},
-
-{
-name:"Chico come universo",
-trailer:"https://www.youtube.com/embed/6HfP9mK7h7A"
-},
-
-{
-name:"#whatnext",
-trailer:"https://www.youtube.com/embed/X4QJ7M0Q8Jc"
-},
-
-{
-name:"La Storia",
-trailer:"https://www.youtube.com/embed/tQ8V0LkP0n8"
-},
-
-{
-name:"Bird Woman Sacajawea",
-trailer:"https://www.youtube.com/embed/4J9fQ2R5Q2A"
-},
-
-{
-name:"Alien Wars Judgement Day",
-trailer:"https://www.youtube.com/embed/0z6xq7YwB1M"
-},
-
-{
-name:"The Office",
-trailer:"https://www.youtube.com/embed/LHOtME2DL4g"
-},
-
-{
-name:"A Lion's Game",
-trailer:"https://www.youtube.com/embed/f8m9T9pQ7l8"
-},
-
-{
-name:"We're Alive: Scout's Honor",
-trailer:"https://www.youtube.com/embed/3m7qL9b1Q8U"
-},
-
-{
-name:"The Darkness",
-trailer:"https://www.youtube.com/embed/4Qw3j5K2w7M"
 }
-
 ];
 
 // DISPLAY MOVIES
