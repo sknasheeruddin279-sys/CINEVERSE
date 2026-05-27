@@ -74,6 +74,7 @@ rating:"8.5/10",
 genre:"Action / Drama",
 description:"Pushpa returns stronger with power, revenge and survival."
 
+
 },
 
 {
@@ -95,7 +96,7 @@ name:"Devara",
 
 image:"images/devara.jpg",
 
-trailer:"https://www.youtube.com/embed/rc61YHl1PFY"
+trailer:"https://www.youtube.com/embed/rc61YHl1PFY",
 year:"2024",
 rating:"8.2/10",
 genre:"Action / Drama",
