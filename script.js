@@ -673,19 +673,45 @@ function showDetails(name){
 let movie =
 movies.find(m=>m.name===name);
 
-alert(
+document.getElementById(
+"detailsPopup"
+).style.display = "flex";
 
-"🎬 " + movie.name +
+document.getElementById(
+"detailsImage"
+).src = movie.image;
 
-"\n\n⭐ Rating: " + movie.rating +
+document.getElementById(
+"detailsTitle"
+).innerText = movie.name;
 
-"\n🎭 Genre: " + movie.genre +
+document.getElementById(
+"detailsRating"
+).innerText =
+"⭐ Rating: " + movie.rating;
 
-"\n📅 Year: " + movie.year +
+document.getElementById(
+"detailsYear"
+).innerText =
+"📅 Year: " + movie.year;
 
-"\n\n📝 " + movie.description
+document.getElementById(
+"detailsGenre"
+).innerText =
+"🎭 Genre: " + movie.genre;
 
-);
+document.getElementById(
+"detailsDesc"
+).innerText =
+"📝 " + movie.description;
+
+}
+
+function closeDetails(){
+
+document.getElementById(
+"detailsPopup"
+).style.display = "none";
 
 }
 
