@@ -289,7 +289,12 @@ onclick="addToWatchlist(
 ❤️ Add to Watchlist
 
 </button>
-
+<button
+onclick="showDetails(
+'${movie.name}'
+)">
+ℹ️ Details
+</button>
 </div>
 
 `;
