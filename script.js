@@ -624,7 +624,7 @@ onclick="playTrailer(
 
 }
 
-getMovies();
+displayMovies();
 
 displayWatchlist();
 
@@ -632,8 +632,14 @@ displayContinueWatching();
 
 function resetData(){
 
-localStorage.clear();
 
+localStorage.removeItem(
+"watchlist"
+);
+
+localStorage.removeItem(
+"continueWatching"
+);
 watchlist = [];
 
 continueWatching = [];
@@ -649,77 +655,4 @@ alert(
 }
 
 
-async function getMovies(){
 
-const url =
-'https://moviesdatabase.p.rapidapi.com/titles?year=2024&limit=10';
-
-const options = {
-
-method:'GET',
-
-headers:{
-
-'X-RapidAPI-Key':
-'d9bafd81a1msh9165ac2151cb115p14127ajsn86356adb679a'
-
-'X-RapidAPI-Host':
-'moviesdatabase.p.rapidapi.com'
-
-}
-
-};
-
-try{
-
-const response =
-await fetch(url,options);
-
-const data =
-await response.json();
-
-let apiMovies =
-
-data.results.map(movie=>({
-
-name:
-movie.titleText?.text || "No Title",
-
-image:
-movie.primaryImage?.url ||
-"https://via.placeholder.com/300x450",
-
-trailer:
-"https://www.youtube.com/embed/g3JUbgOHgdw"
-
-}));
-
-
-movies = [
-
-...new Map(
-
-[...movies,...apiMovies]
-
-.map(movie=>
-
-[movie.name,movie]
-
-)
-
-).values()
-
-];
-
-displayMovies();
-
-}
-
-catch(error){
-
-console.log(error);
-
-}
-
-}
-getMovies();
