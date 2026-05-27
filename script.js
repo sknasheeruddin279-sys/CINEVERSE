@@ -648,6 +648,7 @@ alert(
 
 }
 
+
 async function getMovies(){
 
 const url =
@@ -660,7 +661,7 @@ method:'GET',
 headers:{
 
 'X-RapidAPI-Key':
-'d9bafd81a1msh9165ac2151cb115p14127ajsn86356adb679a',
+'d9bafd81a1msh9165ac2151cb115p14127ajsn86356adb679a'
 
 'X-RapidAPI-Host':
 'moviesdatabase.p.rapidapi.com'
@@ -677,27 +678,9 @@ await fetch(url,options);
 const data =
 await response.json();
 
-console.log(data.results);
+let apiMovies =
 
-data.results.forEach(movie=>{
-
-    
-let trailerLink =
-"https://www.youtube.com/embed/g3JUbgOHgdw";
-
-if(movie.titleText?.text==="Pizzodyssey")
-trailerLink=
-"https://www.youtube.com/embed/8u6V8XxK6L4";
-
-if(movie.titleText?.text==="The Office")
-trailerLink=
-"https://www.youtube.com/embed/LHOtME2DL4g";
-
-if(movie.titleText?.text==="The Darkness")
-trailerLink=
-"https://www.youtube.com/embed/4Qw3j5K2w7M";
-
-movies.unshift({
+data.results.map(movie=>({
 
 name:
 movie.titleText?.text || "No Title",
@@ -707,12 +690,29 @@ movie.primaryImage?.url ||
 "https://via.placeholder.com/300x450",
 
 trailer:
-trailerLink
+"https://www.youtube.com/embed/g3JUbgOHgdw"
 
-});
+}));
 
-});
+
+movies = [
+
+...new Map(
+
+[...movies,...apiMovies]
+
+.map(movie=>
+
+[movie.name,movie]
+
+)
+
+).values()
+
+];
+
 displayMovies();
+
 }
 
 catch(error){
@@ -722,5 +722,4 @@ console.log(error);
 }
 
 }
-
 getMovies();
