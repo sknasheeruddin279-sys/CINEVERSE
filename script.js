@@ -667,12 +667,13 @@ alert(
 );
 
 }
-
+let currentMovieName = "";
 function showDetails(name){
 
 let movie =
 movies.find(m=>m.name===name);
-
+currentMovieName =
+movie.name;
 document.getElementById(
 "detailsPopup"
 ).style.display = "flex";
@@ -715,3 +716,12 @@ document.getElementById(
 
 }
 
+function removeFromWatchlistFromPopup(){
+
+removeFromWatchlist(
+currentMovieName
+);
+
+closeDetails();
+
+}
