@@ -67,7 +67,7 @@ Add screenshots of:
 
 Add your deployed Vercel link here:
 
-
+https://cineverse-ebon-tau.vercel.app
 
 ## 👨‍💻 Author
 
