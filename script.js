@@ -744,7 +744,7 @@ let heroMovies = [
 
 title:"Pushpa 2",
 
-image:"images/pushpa2 banner.jpg",
+image:"images/pushpa 2 banner.jpg",
 banner:"images/pushpa2 banner.jpg",
 
 description:
