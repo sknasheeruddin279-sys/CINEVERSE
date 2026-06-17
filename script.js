@@ -797,7 +797,7 @@ document.getElementById(
 
 banner.style.backgroundImage =
 
-`url('${heroMovies[currentHero].image}')`;
+`url('${heroMovies[currentHero].banner}')`;
 
 title.innerText =
 
