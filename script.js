@@ -96,6 +96,7 @@ let movies = [
 name:"Pushpa 2",
 
 image:"images/pushpa 2.jpg",
+banner:"images/pushpa2 banner.jpg",
 trailer:"https://www.youtube.com/embed/g3JUbgOHgdw?si=bqRefWvPH5dNNbyK",
 category:"Action",
 rating:"8.0",
@@ -243,6 +244,7 @@ description:"The untold story of Mahendra Singh Dhoni's journey from ticket coll
 {
 name:"Jersey",
 image:"images/jersey.jpg",
+banner:"images/jersey banner.jpg",
 trailer:"https://www.youtube.com/embed/AjAe_Q1WZ_8",
 category:"Drama",
 rating:"8.5",
@@ -284,6 +286,7 @@ description:"A romantic drama about love, family values, and overcoming differen
 {
 name:"Kalki 2898-AD",
 image:"images/kalki 2898-ad.jpg",
+banner:"images/kalki 2898-ad banner.jpg",
 trailer:"https://www.youtube.com/embed/y1-w1kUGuz8",
 category:"Sci-Fi",
 rating:"8.4",
