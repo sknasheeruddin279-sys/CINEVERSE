@@ -744,7 +744,7 @@ let heroMovies = [
 
 title:"Pushpa 2",
 
-image:"images/pushpa 2.jpg",
+image:"images/pushpa2 banner.jpg",
 
 description:
 "Pushpa returns with power and revenge."
@@ -755,7 +755,7 @@ description:
 
 title:"Jersey",
 
-image:"images/jersey.jpg",
+image:"images/jersey banner.jpg",
 
 description:
 "A cricketer's emotional comeback."
@@ -766,7 +766,7 @@ description:
 
 title:"Kalki 2898-AD",
 
-image:"images/kalki 2898-ad.jpg",
+image:"images/kalki 2898-ad banner.jpg",
 
 description:
 "A futuristic sci-fi epic."
