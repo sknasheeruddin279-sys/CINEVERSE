@@ -583,6 +583,53 @@ font-size:14px;
         font-size: 14px !important;
     }
 }
-.hero{
-    border: 5px solid red !important;
+/* MOBILE FINAL FIX */
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .logo{
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .navbar div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .search-box{
+        width: 90%;
+    }
+
+    .logout-btn,
+    .reset-btn{
+        width: 120px;
+        margin-left: 0;
+    }
+
+    .hero{
+        width: 100%;
+        height: 56.25vw;
+        min-height: 220px;
+        max-height: 320px;
+        padding-left: 0;
+        background-size: cover;
+        background-position: center;
+    }
 }
