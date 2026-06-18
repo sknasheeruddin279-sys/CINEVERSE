@@ -794,7 +794,8 @@ document.getElementById(
 );
 
 banner.style.backgroundImage =
-"url('images/kalki 2898-ad-banner.jpg')";
+
+`url('${heroMovies[currentHero].banner}')`;
 title.innerText =
 
 heroMovies[currentHero].title;
