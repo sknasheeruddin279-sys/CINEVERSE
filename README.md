@@ -22,9 +22,9 @@ CINEVERSE is a Modern OTT Streaming Platform web application built using HTML, C
 
 ## 🛠️ Technologies Used
 
-* HTML5
-* CSS3
-* JavaScript (ES6)
+* HTML
+* CSS
+* JavaScript
 
 ## 📂 Project Structure
 
@@ -67,7 +67,7 @@ Add screenshots of:
 
 Add your deployed Vercel link here:
 
-https://cineverse-ebon-tau.vercel.app
+cineverse-two-theta.vercel.app
 
 ## 👨‍💻 Author
 
