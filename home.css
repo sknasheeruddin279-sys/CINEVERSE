@@ -547,3 +547,39 @@ font-size:14px;
 }
 
 }
+
+/* FINAL MOBILE HERO FIX */
+
+@media (max-width: 768px){
+
+    .hero{
+        width: 100% !important;
+        height: 56.25vw !important;
+        min-height: 220px !important;
+        max-height: 320px !important;
+
+        padding-left: 0 !important;
+        margin: 0 !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .hero-content{
+        max-width: 90% !important;
+    }
+
+    .hero-content h1{
+        font-size: 30px !important;
+    }
+
+    .hero-content p{
+        font-size: 14px !important;
+    }
+}
