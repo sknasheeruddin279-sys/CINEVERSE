@@ -53,6 +53,8 @@ backdrop-filter:blur(12px);
 
 border:1px solid rgba(255,255,255,0.15);
 
+box-shadow:0 0 30px rgba(229,9,20,0.3);
+
 text-align:center;
 
 color:white;
@@ -131,4 +133,25 @@ margin-top:20px;
 color:#e50914;
 
 text-decoration:none;
+}
+
+.show-pass{
+display:flex;
+align-items:center;
+gap:8px;
+justify-content:flex-start;
+margin-top:10px;
+color:white;
+}
+
+.login-box button:hover{
+background:#ff1e2d;
+transform:scale(1.03);
+transition:0.3s;
+}
+
+@media(max-width:768px){
+.login-box h1{
+font-size:40px;
+}
 }
