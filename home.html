@@ -41,6 +41,14 @@ id="searchInput"
 onkeyup="searchMovies()">
 
 <button
+class="profile-btn"
+onclick="showProfile()">
+
+👤 Profile
+
+</button>
+
+<button
 class="logout-btn"
 
 onclick="logout()">
@@ -278,6 +286,43 @@ id="popupTrailer">
 
 </button>
 </div>
+
+</div>
+
+<div id="profilePopup" class="profile-popup">
+
+  <div class="profile-content">
+
+    <span class="close-btn" onclick="closeProfile()">✖</span>
+
+    <h2>👤 User Profile</h2>
+    
+    <img
+id="profileImage"
+src="images/default-profile.png"
+onclick="document.getElementById('profileUpload').click()">
+
+<input
+type="file"
+id="profileUpload"
+accept="image/*"
+onchange="uploadProfile(event)"
+style="display:none;">
+    <button
+class="remove-profile-btn"
+onclick="removeProfilePic()">
+
+🗑️ Remove
+
+</button>
+
+    <p id="profileName"></p>
+
+    <p id="profileWatchlist"></p>
+
+    <p id="profileContinue"></p>
+
+  </div>
 
 </div>
 
