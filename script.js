@@ -828,21 +828,24 @@ changeHero,
 5000
 );
 
-function togglePassword(){
+function toggleLoginPassword(){
 
-let pass =
+let password =
 document.getElementById(
 "password"
 );
 
-pass.type =
-pass.type==="password"
-? "text"
-: "password";
+if(password.type==="password"){
+
+password.type="text";
+
+}else{
+
+password.type="password";
 
 }
 
-
+}
 function toggleSignupPassword(){
 
 let pass =
