@@ -83,7 +83,7 @@ CINEVERSE/
 
 Add your deployed Vercel link here:
 
-cineverse-two-theta.vercel.app
+https://cineverse-two-theta.vercel.app/signup.html
 
 ## 👨‍💻 Author
 
