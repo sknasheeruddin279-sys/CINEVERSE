@@ -6,7 +6,6 @@ box-sizing:border-box;
 
 font-family:Arial;
 }
-
 body{
 
 background:url("images/login-bg.jpg");
@@ -58,7 +57,9 @@ box-shadow:0 0 30px rgba(229,9,20,0.9);
 text-align:center;
 
 color:white;
+
 }
+
 /* TITLE */
 
 .login-box h1{
@@ -155,3 +156,4 @@ transition:0.3s;
 font-size:40px;
 }
 }
+
