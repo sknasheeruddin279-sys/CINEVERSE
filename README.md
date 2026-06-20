@@ -9,6 +9,8 @@ CINEVERSE is a Modern OTT Streaming Platform web application built using HTML, C
 * 🔐 User Login & Signup
 * 👁️ Show Password Option
 * ✅ Confirm Password Validation
+* 👤 User Profile
+* 🖼️ Profile Picture Upload & Remove
 * 🎬 Movie Categories (Action, Drama, Horror, Romance, Sci-Fi, etc.)
 * 🔍 Search Movies
 * ▶️ Watch Movie Trailers
@@ -47,21 +49,35 @@ CINEVERSE/
 ## 🎯 Future Enhancements
 
 * Firebase Authentication
-* User Profiles
 * Movie API Integration
-* Dark/Light Theme
 * Ratings & Reviews
 * Backend Database Support
 
 ## 📸 Screenshots
 
-Add screenshots of:
+### Login Page
 
-* Login Page
-* Signup Page
-* Home Page
-* Movie Details Popup
-* Watchlist Section
+![Login Page](images/login-page.png)
+
+### Signup Page
+
+![Signup Page](images/signup-page.png)
+
+### Home Page
+
+![Home Page](images/home-page.png)
+
+### User Profile
+
+![User Profile](images/profile-page.png)
+
+### Movie Details Popup
+
+![Movie Details Popup](images/movie-popup.png)
+
+### Watchlist Page
+
+![Watchlist Page](images/watchlist-page.png)
 
 ## 🌐 Live Demo
 
