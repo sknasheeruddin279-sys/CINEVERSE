@@ -620,6 +620,7 @@ onclick="showMovieDetails('${movie.name}')">
 
 }
 
+
 function playTrailer(link,name){
 
 document.getElementById(
@@ -744,6 +745,7 @@ let heroMovies = [
 
 title:"Pushpa 2",
 
+image:"images/pushpa2 banner.jpg",
 banner:"images/pushpa2-banner.jpg",
 
 description:
@@ -755,6 +757,7 @@ description:
 
 title:"Jersey",
 
+image:"images/jersey banner.jpg",
 banner:"images/jersey-banner.jpg",
 description:
 "A cricketer's emotional comeback."
@@ -765,6 +768,7 @@ description:
 
 title:"Kalki 2898-AD",
 
+image:"images/kalki 2898-ad banner.jpg",
 banner:"images/kalki 2898-ad-banner.jpg",
 description:
 "A futuristic sci-fi epic."
@@ -796,6 +800,7 @@ document.getElementById(
 banner.style.backgroundImage =
 
 `url('${heroMovies[currentHero].banner}')`;
+
 title.innerText =
 
 heroMovies[currentHero].title;
@@ -1094,5 +1099,58 @@ function closeMoviePopup(){
 document.getElementById(
 "moviePopup"
 ).style.display="none";
+
+}
+
+function showProfile(){
+
+let username =
+localStorage.getItem("username") || "Guest";
+
+document.getElementById("profilePopup").style.display = "flex";
+
+document.getElementById("profileName").innerHTML =
+"Username: " + username;
+
+let pic =
+localStorage.getItem("profilePic");
+
+if(pic){
+document.getElementById("profileImage").src = pic;
+}
+
+}
+
+function closeProfile(){
+document.getElementById("profilePopup").style.display = "none";
+}
+
+function uploadProfile(event){
+
+let file = event.target.files[0];
+
+let reader = new FileReader();
+
+reader.onload = function(){
+
+localStorage.setItem("profilePic", reader.result);
+
+document.getElementById("profileImage").src = reader.result;
+
+};
+
+reader.readAsDataURL(file);
+}
+
+function removeProfilePic(){
+
+localStorage.removeItem(
+"profilePic"
+);
+
+document.getElementById(
+"profileImage"
+).src =
+"images/default-profile.png";
 
 }
