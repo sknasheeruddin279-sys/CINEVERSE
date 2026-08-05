@@ -139,28 +139,23 @@ CINEVERSE/
 
 🔐 Login Page
 
-(Add Login Page Screenshot)
+login-page.png
 
  📝 Signup Page
 
-(Add Signup Page Screenshot)
+signup-page.png
 
-🚀 Splash Screen
+👤 Profile Page
 
-(Add Splash Screen Screenshot)
+profile-page.png
 
 🏠 Home Page
 
-(Add Home Page Screenshot)
-
-
-ℹ️ Movie Details Popup
-
-(Add M
+home-page.png
 
  ❤️ Watchlist Page
 
-(Add Watchlist Screenshot)
+watchlist-page.png
 
 
 🌐 Live Demo
