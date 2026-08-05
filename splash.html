@@ -1,75 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 
-<title>CINEVERSE</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-body{
+    <title>CINEVERSE</title>
 
-margin:0;
+    <style>
 
-display:flex;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-justify-content:center;
+        body{
+            width: 100%;
+            min-height: 100vh;
 
-align-items:center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-height:100vh;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(229, 9, 20, 0.18),
+                    black 65%
+                );
 
-background:black;
-}
+            color: white;
+            overflow: hidden;
+        }
 
-.logo{
+        .logo{
+            color: #e50914;
+            font-size: clamp(42px, 10vw, 80px);
+            font-weight: bold;
+            letter-spacing: 5px;
 
-color:red;
+            text-shadow:
+                0 0 10px #e50914,
+                0 0 25px rgba(229, 9, 20, 0.8);
 
-font-size:70px;
+            animation: logoZoom 1.8s ease;
+        }
 
-font-weight:bold;
+        .tagline{
+            margin-top: 14px;
+            color: #cccccc;
+            font-size: 16px;
+            letter-spacing: 2px;
 
-animation:zoom 2s ease;
-}
+            animation: fadeIn 2s ease;
+        }
 
-@keyframes zoom{
+        .loader{
+            width: 42px;
+            height: 42px;
 
-0%{
+            margin-top: 30px;
 
-transform:scale(0);
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #e50914;
+            border-radius: 50%;
 
-}
+            animation: spin 0.8s linear infinite;
+        }
 
-100%{
+        .loading-text{
+            margin-top: 14px;
+            color: #bbbbbb;
+            font-size: 14px;
+            letter-spacing: 1px;
 
-transform:scale(1);
+            animation: fadeIn 2s ease;
+        }
 
-}
+        @keyframes logoZoom{
 
-}
+            0%{
+                opacity: 0;
+                transform: scale(0.3);
+            }
 
-</style>
+            70%{
+                opacity: 1;
+                transform: scale(1.08);
+            }
+
+            100%{
+                transform: scale(1);
+            }
+
+        }
+
+        @keyframes fadeIn{
+
+            from{
+                opacity: 0;
+            }
+
+            to{
+                opacity: 1;
+            }
+
+        }
+
+        @keyframes spin{
+
+            to{
+                transform: rotate(360deg);
+            }
+
+        }
+
+        @media(max-width: 768px){
+
+            .logo{
+                letter-spacing: 2px;
+            }
+
+            .tagline{
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
-<h1 class="logo">
+    <h1 class="logo">
+        CINEVERSE
+    </h1>
 
-CINEVERSE
+    <p class="tagline">
+        UNLIMITED MOVIES & ENTERTAINMENT
+    </p>
 
-</h1>
+    <div class="loader"></div>
 
-<script>
+    <p class="loading-text">
+        Loading your experience...
+    </p>
 
-setTimeout(()=>{
+    <script>
 
-window.location.href=
-"home.html";
+        setTimeout(() => {
 
-},3000);
+            window.location.replace("home.html");
 
-</script>
+        }, 3000);
+
+    </script>
 
 </body>
 
