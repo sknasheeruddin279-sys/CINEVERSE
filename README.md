@@ -138,7 +138,7 @@ CINEVERSE/
  📸 Screenshots
 
 🔐 Login Page
-![Login Page](images/login-page.png)
+![Login Page](images/loginpage.png)
 
  📝 Signup Page
 
