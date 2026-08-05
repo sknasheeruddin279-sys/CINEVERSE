@@ -2,81 +2,79 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
 
-<meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <title>CINEVERSE Login</title>
 
-<title>CINEVERSE Login</title>
-
-<link rel="stylesheet"
-href="login.css">
-
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
 
+    <div class="overlay">
 
-<div class="overlay">
+        <div class="login-box">
 
-<div class="login-box">
+            <h1>CINEVERSE</h1>
 
-<h1>CINEVERSE</h1>
+            <p class="subtitle">
+                Unlimited Movies & Entertainment
+            </p>
 
-<p class="subtitle">
+            <input
+                type="text"
+                placeholder="Username"
+                id="username"
+            >
 
-Unlimited Movies & Entertainment
+            <input
+                type="password"
+                placeholder="Password"
+                id="password"
+            >
 
-</p>
+            <label class="show-pass">
+                <input
+                    type="checkbox"
+                    onclick="toggleLoginPassword()"
+                >
+                Show Password
+            </label>
 
-<input
-type="text"
+            <button type="button" onclick="login()">
+                Login
+            </button>
 
-placeholder="Username"
+            <button
+                type="button"
+                class="google-btn"
+                onclick="googleLogin()"
+            >
+                <img
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                    alt="Google"
+                >
+                Continue with Google
+            </button>
 
-id="username">
+            <p id="message"></p>
 
-<input
-type="password"
+            <p class="signup-text">
+                Don't have an account?
+                <a href="signup.html">Signup</a>
+            </p>
 
-placeholder="Password"
+        </div>
 
-id="password">
+    </div>
 
-<label class="show-pass">
-
-<input
-type="checkbox"
-onclick="toggleLoginPassword()">
-
-Show Password
-
-</label>
-
-<button onclick="login()">
-
-Login
-
-</button>
-
-<p id="message"></p>
-
-<p class="signup-text">
-
-Don't have an account?
-
-<a href="signup.html">
-
-Signup
-
-</a>
-
-</p>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="firebase.js"></script>
 
 </body>
 </html>
