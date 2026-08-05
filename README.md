@@ -139,7 +139,7 @@ CINEVERSE/
 
 🔐 Login Page
 
-login-page.png
+images/login-page.png
 
  📝 Signup Page
 
