@@ -8,7 +8,8 @@ import {
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
-// Firebase Configuration
+// ================= FIREBASE CONFIG =================
+
 const firebaseConfig = {
   apiKey: "AIzaSyByrfSqiUPuiwQqbtpXHsh1MnwFnih3MYg",
   authDomain: "cineverse-ott.firebaseapp.com",
@@ -19,7 +20,8 @@ const firebaseConfig = {
   measurementId: "G-5CRWCT5NNH"
 };
 
-// Initialize Firebase
+// ================= INITIALIZE FIREBASE =================
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
@@ -28,57 +30,78 @@ const provider = new GoogleAuthProvider();
 
 window.googleLogin = async function () {
 
-  try {
+    try {
 
-    const result = await signInWithPopup(auth, provider);
+        const result = await signInWithPopup(auth, provider);
 
-    const user = result.user;
+        const user = result.user;
 
-    localStorage.setItem("userName", user.displayName);
-    localStorage.setItem("userEmail", user.email);
-    localStorage.setItem("userPhoto", user.photoURL);
+        localStorage.setItem("userName", user.displayName || "");
+        localStorage.setItem("userEmail", user.email || "");
+        localStorage.setItem("userPhoto", user.photoURL || "");
 
-    alert("Welcome " + user.displayName);
+        alert("Welcome " + user.displayName);
 
-    window.location.href = "home.html";
+        window.location.replace("home.html");
 
-  } catch (error) {
+    } catch (error) {
 
-    console.error(error);
+        console.error(error);
 
-    alert("Login Failed\n\n" + error.message);
-
-  }
-
-};
-
-// ================= LOGOUT =================
-
-window.googleLogout = async function () {
-
-  await signOut(auth);
-
-  localStorage.clear();
-
-  window.location.href = "index.html";
-
-};
-
-// ================= AUTO LOGIN =================
-
-onAuthStateChanged(auth, (user) => {
-
-  if (user) {
-
-    if (
-      window.location.pathname.endsWith("index.html") ||
-      window.location.pathname === "/"
-    ) {
-
-      window.location.href = "home.html";
+        alert("Login Failed\n\n" + error.message);
 
     }
 
-  }
+};
+
+// ================= GOOGLE LOGOUT =================
+
+window.googleLogout = async function () {
+
+    try {
+
+        await signOut(auth);
+
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userEmail");
+        localStorage.removeItem("userPhoto");
+
+        alert("Logged out successfully!");
+
+        window.location.replace("index.html");
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("Logout Failed\n\n" + error.message);
+
+    }
+
+};
+
+// ================= AUTO REDIRECT =================
+
+onAuthStateChanged(auth, (user) => {
+
+    const page = window.location.pathname;
+
+    // User login ayi unte index page nunchi home ki redirect
+    if (
+        user &&
+        (page.endsWith("index.html") || page === "/" || page.endsWith("/"))
+    ) {
+
+        window.location.replace("home.html");
+    }
+
+    // User login kakapothe home page nunchi index ki redirect
+    if (
+        !user &&
+        page.endsWith("home.html")
+    ) {
+
+        window.location.replace("index.html");
+    }
 
 });
