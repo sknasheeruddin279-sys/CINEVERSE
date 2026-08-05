@@ -140,6 +140,9 @@
 </head>
 
 <body>
+    <audio id="introSound" preload="auto">
+    <source src="sounds/cineverse-intro.wav" type="audio/wav">
+</audio>
 
     <h1 class="logo">
         CINEVERSE
@@ -157,13 +160,25 @@
 
     <script>
 
-        setTimeout(() => {
+const intro = document.getElementById("introSound");
 
-            window.location.replace("home.html");
+window.onload = () => {
 
-        }, 3000);
+    intro.volume = 0.7;
 
-    </script>
+    intro.play().catch(() => {
+        console.log("Autoplay blocked");
+    });
+
+    setTimeout(() => {
+
+        window.location.replace("home.html");
+
+    }, 2500);
+
+};
+
+</script>
 
 </body>
 
