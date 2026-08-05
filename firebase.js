@@ -143,9 +143,8 @@ window.googleLogin = async function () {
             "success"
         );
 
-        window.location.replace(
-            "home.html"
-        );
+        window.location.replace("splash.html");
+    
 
     } catch (error) {
 
@@ -283,7 +282,7 @@ onAuthStateChanged(
             if (isLoginPage) {
 
                 window.location.replace(
-                    "home.html"
+                    "splash.html"
                 );
 
             }
