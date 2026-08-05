@@ -142,19 +142,19 @@ CINEVERSE/
 
  📝 Signup Page
 
-signup-page.png
+![Signup Page](images/signup-page.png)
 
 👤 Profile Page
 
-profile-page.png
 
+![Profile Page](images/profile-page.png)
 🏠 Home Page
 
-home-page.png
+![Home Page](images/home-page.png)
 
  ❤️ Watchlist Page
 
-watchlist-page.png
+![Watchlist Page](images/watchlist-page.png)
 
 
 🌐 Live Demo
