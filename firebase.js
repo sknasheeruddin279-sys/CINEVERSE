@@ -117,11 +117,11 @@ window.googleLogin = async function () {
 
         const user = result.user;
 
-        localStorage.setItem(
-            "userName",
-            user.displayName || "User"
-        );
-
+       localStorage.setItem(
+    "userName",
+    user.displayName ||
+    (user.email ? user.email.split("@")[0] : "User")
+);
         localStorage.setItem(
             "userEmail",
             user.email || ""
@@ -133,11 +133,19 @@ window.googleLogin = async function () {
         );
 
         // Home page lo display cheyadaniki save chestundi
-        sessionStorage.setItem(
-            "toastMessage",
-            `Welcome, ${user.displayName || "User"} 👋`
-        );
+       const displayName =
+    user.displayName ||
+    (user.email ? user.email.split("@")[0] : "User");
 
+localStorage.setItem(
+    "userName",
+    displayName
+);
+
+sessionStorage.setItem(
+    "toastMessage",
+    `Welcome, ${displayName} 👋`
+);
         sessionStorage.setItem(
             "toastType",
             "success"
