@@ -1157,3 +1157,23 @@ document.getElementById(
 "images/default-profile.png";
 
 }
+
+// ================= USER PROFILE =================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const userName = localStorage.getItem("userName") || "Guest";
+    const userPhoto = localStorage.getItem("userPhoto");
+
+    const nameElement = document.getElementById("userName");
+    const photoElement = document.getElementById("userPhoto");
+
+    if (nameElement) {
+        nameElement.textContent = userName;
+    }
+
+    if (photoElement && userPhoto) {
+        photoElement.src = userPhoto;
+    }
+
+});
