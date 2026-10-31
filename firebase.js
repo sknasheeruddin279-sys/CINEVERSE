@@ -120,11 +120,11 @@ window.googleLogin = async function () {
        localStorage.setItem(
     "userName",
     user.displayName ||
-    (user.email ? user.email.split("@")[0] : "User")
+    user.email ? user.email.split("@")[0]
 );
         localStorage.setItem(
             "userEmail",
-            user.email || ""
+            user.email
         );
 
         localStorage.setItem(
