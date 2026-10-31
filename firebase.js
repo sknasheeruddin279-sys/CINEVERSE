@@ -105,70 +105,43 @@ function showToast(message, type = "success") {
 
 // ================= GOOGLE LOGIN =================
 
+// ================= GOOGLE LOGIN =================
+
 window.googleLogin = async function () {
-
     try {
-
-        const result =
-            await signInWithPopup(
-                auth,
-                provider
-            );
-
+        const result = await signInWithPopup(auth, provider);
         const user = result.user;
 
-       localStorage.setItem(
-    "userName",
-    user.displayName ||
-    user.email ? user.email.split("@")[0]
-);
-        localStorage.setItem(
-            "userEmail",
-            user.email
-        );
+        const displayName =
+            user.displayName ||
+            (user.email ? user.email.split("@")[0] : "User");
 
-        localStorage.setItem(
-            "userPhoto",
-            user.photoURL || ""
-        );
+        const profilePic = user.photoURL || "";
 
-        // Home page lo display cheyadaniki save chestundi
-       const displayName =
-    user.displayName ||
-    (user.email ? user.email.split("@")[0] : "User");
+        // Save Google account details
+        localStorage.setItem("userName", displayName);
+        localStorage.setItem("userEmail", user.email || "");
+        localStorage.setItem("userPhoto", profilePic);
 
-localStorage.setItem(
-    "userName",
-    displayName
-);
-
-sessionStorage.setItem(
-    "toastMessage",
-    `Welcome, ${displayName} 👋`
-);
         sessionStorage.setItem(
-            "toastType",
-            "success"
+            "toastMessage",
+            `Welcome, ${displayName} 👋`
         );
+
+        sessionStorage.setItem("toastType", "success");
 
         window.location.replace("splash.html");
-    
 
     } catch (error) {
-
-        console.error(
-            "Google Login Error:",
-            error
-        );
+        console.error("Google Login Error:", error);
 
         showToast(
             "Google login failed. Please try again.",
             "error"
         );
-
     }
-
 };
+
 
 
 // ================= GOOGLE LOGOUT =================
